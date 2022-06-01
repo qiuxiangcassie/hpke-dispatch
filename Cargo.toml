@@ -42,10 +42,10 @@ features = ["derive"]
 optional = true
 package = "serde"
 
-[target.'cfg(target_arch = "wasm32")'.dependencies]
-wasm-bindgen = "0.2.80"
-getrandom = { version = "0.2.6", features = ["js", "js-sys"] }
-wee_alloc = "0.4.5"
+# [target.'cfg(target_arch = "wasm32")'.dependencies]
+# wasm-bindgen = "0.2.80"
+# getrandom = { version = "0.2.6", features = ["js", "js-sys"] }
+# wee_alloc = "0.4.5"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
