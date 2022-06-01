@@ -14,7 +14,6 @@ cfg_eval = []
 base-mode-open = []
 base-mode-seal = []
 wee-alloc = []
-serde = ["serde_crate"]
 algo-all = ["aead-all", "kdf-all", "kem-all"]
 default = ["algo-all", "base-mode-seal", "base-mode-open", "hpke/std"]
 aead-all = ["aead-aes-gcm-128", "aead-aes-gcm-256", "aead-chacha-20-poly-1305"]
@@ -33,7 +32,7 @@ kem-x25519-hkdf-sha256 = ["hpke/x25519"]
 rand = "0.8.5"
 num_enum = "0.5.7"
 cfg-if = "1.0.0"
-hpke = { version = "0.9.0", default-features = false }
+hpke = { git = "https://github.com/qiuxiangcassie/rust-hpke", rev = "2352721f5e75f1c1dbe7ec18af4637884c90d97f", features = ["default", "std"], default-features = false}
 zeroize = "1.3"
 
 [dependencies.serde_crate]
